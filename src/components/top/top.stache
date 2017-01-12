@@ -1,0 +1,9 @@
+<can-import from="tabletop/components/modal/" />
+<div class="topbar">
+  <button ($click)="openModal()" class="btn-fixed">Open a modal</button>
+</div>
+<div class="tabletop">
+  {{#each modals}}
+    <tabletop-modal {(modal)}="this" {(modals)}="modals"><b>Something</b></tabletop-modal>
+  {{/each}}
+</div>
