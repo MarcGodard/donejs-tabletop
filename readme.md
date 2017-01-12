@@ -1,13 +1,15 @@
 # tabletop
 
-Welcome to the tabletop DoneJS application! This is a bare-bone tabletop with draggable windows app.
+Welcome to the tabletop DoneJS application! This is a bare-bone tabletop app with draggable and resizable windows.
+
+The start of a component
 
 #### Todo:
 - [ ] Save window position and size for reopen
 - [ ] Be able to pre-crate windows
 - [ ] Minimize / expand windows
 - [ ] Pre-set layouts
-- [ ] Update canJS to version 3.3 and other libraries
+- [ ] Update canJS to version 3.4 and other libraries
 
 ## Getting started
 
@@ -24,7 +26,7 @@ Tests can be run with
 
 ```
 donejs test
-``
+```
 
 ## Development mode
 
