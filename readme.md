@@ -6,7 +6,7 @@ The start of a component
 
 #### Todo:
 - [ ] Save window position and size for reopen
-- [ ] Be able to pre-crate windows
+- [ ] Be able to pre-create windows and have a menu
 - [ ] Minimize / expand windows
 - [ ] Pre-set layouts
 - [ ] Update canJS to version 3.4 and other libraries
