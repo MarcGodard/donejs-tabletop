@@ -1,7 +1,7 @@
 import Component from 'can/component/';
 import Map from 'can/map/';
 import 'can/map/define/';
-import './modal.less!';
+import './modal.less!src/components/top/modal/modal';
 import template from './modal.stache!';
 
 export const ViewModel = Map.extend({

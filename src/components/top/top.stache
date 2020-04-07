@@ -1,4 +1,4 @@
-<can-import from="tabletop/components/modal/" />
+<can-import from="tabletop/components/top/modal/" />
 <div class="topbar">
   <button ($click)="openModal()" class="btn-fixed">Open a modal</button>
 </div>

@@ -1,5 +1,5 @@
-import Component from 'can/component/';
-import Map from 'can/map/';
+import Component from 'can/component/component';
+import Map from 'can/map/map';
 import 'can/map/define/';
 import './top.less!';
 import template from './top.stache!';
@@ -62,7 +62,7 @@ export default Component.extend({
   events: {
     'mousedown': function (something, event) {
       this.currentModalID = $(event.target).closest(".modal").attr('id');
-      let modal = this.viewModel.attr('modals').filter(e => e.id == this.currentModalID)[0];
+      let modal = this.viewModel.attr('modals').filter(e => e.id === this.currentModalID)[0];
       let $closestResize = $(event.target).closest(".resize");
 
       if ($closestResize.hasClass('north-resize')) {
@@ -110,13 +110,13 @@ export default Component.extend({
     },
     'mousemove': function(something, event) {
       let $tabletop = $('.tabletop');
-      let modal = this.viewModel.attr('modals').filter(e => e.id == this.currentModalID)[0];
+      let modal = this.viewModel.attr('modals').filter(e => e.id === this.currentModalID)[0];
       let newTop, newLeft, newWidth, newHeight;
       let tabletopHeight = $tabletop.height(), tabletopWidth = $tabletop.width();
 
-      if (typeof modal != 'undefined') {
-        if (!modal.attr('maxHeight') || modal.attr('maxHeight') == 0) modal.attr('maxHeight', tabletopHeight);
-        if (!modal.attr('maxWidth') || modal.attr('maxWidth') == 0) modal.attr('maxWidth', tabletopWidth);
+      if (typeof modal !== 'undefined') {
+        if (!modal.attr('maxHeight') || modal.attr('maxHeight') === 0) modal.attr('maxHeight', tabletopHeight);
+        if (!modal.attr('maxWidth') || modal.attr('maxWidth') === 0) modal.attr('maxWidth', tabletopWidth);
 
         if (this.hasNorthResize) {
           newTop = modal.attr('top') - (this.startY - event.screenY);
@@ -211,7 +211,7 @@ export default Component.extend({
       }
     },
     'mouseup': function() {
-      let modal = this.viewModel.attr('modals').filter(e => e.id == this.currentModalID)[0];
+      let modal = this.viewModel.attr('modals').filter(e => e.id === this.currentModalID)[0];
       if (typeof modal !== 'undefined') this.viewModel.removeClass(modal, 'is-dragging');
 
       if (this.hasNorthResize) {
@@ -235,7 +235,7 @@ export default Component.extend({
       }
     },
     'mouseleave': function() {
-      let modal = this.viewModel.attr('modals').filter(e => e.id == this.currentModalID)[0];
+      let modal = this.viewModel.attr('modals').filter(e => e.id === this.currentModalID)[0];
       if (typeof modal !== 'undefined') this.viewModel.removeClass(modal, 'is-dragging');
 
       if (this.hasNorthResize) {
